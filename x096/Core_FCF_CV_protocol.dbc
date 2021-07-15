@@ -1,0 +1,339 @@
+VERSION "1"
+// BundelVersion=v4.20.10_RC1
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EyeQ4 MCU
+
+
+
+BO_ 120 Core_FCF_CV_protocol: 164 EyeQ4
+ SG_ FCF_CV_Zero_byte : 0|8@1+ (1,0) [0|255] "NA" MCU
+ SG_ FCF_CV_Protocol_Version : 8|8@1+ (1,0) [1|1] "counter" MCU
+ SG_ FCF_CV_Sync_ID : 16|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ Reserved_1 : 24|8@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L1 : 32|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L1 : 64|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L1 : 96|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L1 : 104|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L1 : 114|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L1 : 116|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_2 : 126|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L1 : 128|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L1 : 136|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L1 : 144|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L1 : 152|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L1 : 160|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L1 : 168|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_3 : 176|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L2 : 192|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L2 : 224|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L2 : 256|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L2 : 264|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L2 : 274|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L2 : 276|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_4 : 286|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L2 : 288|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L2 : 296|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L2 : 304|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L2 : 312|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L2 : 320|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L2 : 328|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_5 : 336|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L3 : 352|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L3 : 384|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L3 : 416|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L3 : 424|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L3 : 434|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L3 : 436|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_6 : 446|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L3 : 448|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L3 : 456|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L3 : 464|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L3 : 472|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L3 : 480|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L3 : 488|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_7 : 496|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L4 : 512|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L4 : 544|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L4 : 576|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L4 : 584|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L4 : 594|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L4 : 596|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_8 : 606|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L4 : 608|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L4 : 616|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L4 : 624|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L4 : 632|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L4 : 640|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L4 : 648|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_9 : 656|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L5 : 672|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L5 : 704|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L5 : 736|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L5 : 744|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L5 : 754|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L5 : 756|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_10 : 766|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L5 : 768|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L5 : 776|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L5 : 784|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L5 : 792|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L5 : 800|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L5 : 808|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_11 : 816|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L6 : 832|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L6 : 864|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L6 : 896|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L6 : 904|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L6 : 914|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L6 : 916|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_12 : 926|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L6 : 928|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L6 : 936|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L6 : 944|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L6 : 952|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L6 : 960|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L6 : 968|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_13 : 976|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L7 : 992|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L7 : 1024|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L7 : 1056|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L7 : 1064|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L7 : 1074|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L7 : 1076|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_14 : 1086|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L7 : 1088|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L7 : 1096|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L7 : 1104|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L7 : 1112|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L7 : 1120|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L7 : 1128|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_15 : 1136|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_CRC_L8 : 1152|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ FCF_CV_Alert_L8 : 1184|32@1+ (1,0) [0|65535] "ENUM" MCU
+ SG_ FCF_CV_ID_L8 : 1216|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ FCF_CV_TTC_Thresh_L8 : 1224|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ FCF_CV_Target_Source_L8 : 1234|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ FCF_CV_TTC_L8 : 1236|10@1+ (0.05,0) [0|5] "s" MCU
+ SG_ Reserved_16 : 1246|2@1+ (1,0) [0|0] "NA" MCU
+ SG_ FCF_CV_Decel_Thresh_L8 : 1248|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Decel_To_Avoid_L8 : 1256|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Target_Decel_ToAvoid_L8 : 1264|8@1+ (0.25,0) [0|12] "m_per_s2" MCU
+ SG_ FCF_CV_Min_Dist_Thresh_L8 : 1272|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Min_Dist_L8 : 1280|8@1+ (0.25,0) [0|4] "m" MCU
+ SG_ FCF_CV_Validation_Level_L8 : 1288|8@1+ (1,0) [0|4] "ENUM" MCU
+ SG_ Reserved_17 : 1296|16@1+ (1,0) [0|0] "NA" MCU
+
+
+CM_ SG_ 120 FCF_CV_Zero_byte "in case set to FF message is not available.";
+CM_ SG_ 120 FCF_CV_Protocol_Version "Denotes the protocol version";
+CM_ SG_ 120 FCF_CV_Sync_ID "Sync ID to be used to sync between signals in the system";
+CM_ SG_ 120 FCF_CV_CRC_L1 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L1 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L1 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L1 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L1 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L1 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L1 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L1 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L1 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L1 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L1 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L1 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L2 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L2 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L2 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L2 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L2 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L2 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L2 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L2 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L2 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L2 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L2 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L2 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L3 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L3 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L3 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L3 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L3 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L3 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L3 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L3 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L3 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L3 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L3 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L3 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L4 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L4 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L4 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L4 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L4 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L4 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L4 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L4 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L4 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L4 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L4 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L4 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L5 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L5 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L5 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L5 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L5 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L5 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L5 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L5 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L5 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L5 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L5 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L5 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L6 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L6 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L6 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L6 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L6 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L6 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L6 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L6 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L6 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L6 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L6 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L6 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L7 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L7 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L7 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L7 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L7 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L7 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L7 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L7 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L7 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L7 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L7 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L7 "Validation level, initial is 0/1";
+CM_ SG_ 120 FCF_CV_CRC_L8 "CRC over all the LX signals. From FCF_CV_Alert_LX until FCF_CV_Validation_Level_LX including";
+CM_ SG_ 120 FCF_CV_Alert_L8 "Alert for this set";
+CM_ SG_ 120 FCF_CV_ID_L8 "ID for CV";
+CM_ SG_ 120 FCF_CV_TTC_Thresh_L8 "TTC threshold for target";
+CM_ SG_ 120 FCF_CV_Target_Source_L8 "Target detection source";
+CM_ SG_ 120 FCF_CV_TTC_L8 "General estimation for debug only of the TTC measured at alert event";
+CM_ SG_ 120 FCF_CV_Decel_Thresh_L8 "Ego deceleration threshold";
+CM_ SG_ 120 FCF_CV_Decel_To_Avoid_L8 "Minimum ego deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Target_Decel_ToAvoid_L8 "Minimum target deceleration for avoidance ";
+CM_ SG_ 120 FCF_CV_Min_Dist_Thresh_L8 "Clearing distance threshold between Ego and Target, impact = 0";
+CM_ SG_ 120 FCF_CV_Min_Dist_L8 "Clearing distance between Ego and Target, impact = 1";
+CM_ SG_ 120 FCF_CV_Validation_Level_L8 "Validation level, initial is 0/1";
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "BusType" "Ethernet";
+
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Protocol_Version 1;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L1 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L1 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L1 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L1 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L2 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L2 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L2 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L2 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L3 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L3 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L3 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L3 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L4 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L4 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L4 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L4 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L5 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L5 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L5 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L5 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L6 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L6 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L6 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L6 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L7 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L7 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L7 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L7 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Alert_L8 39270;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_Thresh_L8 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Decel_To_Avoid_L8 48;
+BA_ "GenSigStartValue" SG_ 120 FCF_CV_Target_Decel_ToAvoid_L8 48;
+
+
+VAL_ 120 FCF_CV_Alert_L1 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L1 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L1 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L2 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L2 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L2 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L3 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L3 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L3 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L4 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L4 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L4 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L5 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L5 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L5 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L6 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L6 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L6 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L7 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L7 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L7 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+VAL_ 120 FCF_CV_Alert_L8 43605 "ALERT" 39270 "NO_ALERT" ;
+VAL_ 120 FCF_CV_Target_Source_L8 3 "FUSED_OBJECT" 2 "RADAR_ONLY" 1 "VISION_ONLY" ;
+VAL_ 120 FCF_CV_Validation_Level_L8 4 "RESERVED" 3 "RESERVED" 2 "VALIDATED" 1 "NON_VALIDATED" ;
+
+
+
+

@@ -1,0 +1,137 @@
+VERSION "11"
+// BundelVersion=v4.20.10_RC1
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EyeQ4 MCU
+
+
+
+BO_ 82 Core_Common_protocol: 60 EyeQ4
+ SG_ COM_Zero_byte : 0|8@1+ (1,0) [0|255] "NA" MCU
+ SG_ Reserved_1 : 8|24@1+ (1,0) [0|0] "NA" MCU
+ SG_ COM_CRC : 32|32@1+ (1,0) [0|4294967295] "NA" MCU
+ SG_ COM_Protocol_Version : 64|8@1+ (1,0) [11|11] "counter" MCU
+ SG_ COM_Sync_Frame_ID : 72|8@1+ (1,0) [0|255] "counter" MCU
+ SG_ Reserved_2 : 80|16@1+ (1,0) [0|0] "NA" MCU
+ SG_ COM_Frame_MCU_TS_Start : 96|64@1+ (1,0) [0|18446744073709551615] "us" MCU
+ SG_ COM_Last_MCU_Sync_TS : 160|64@1+ (1,0) [0|18446744073709551615] "us" MCU
+ SG_ COM_Last_Clock_Sync_Skew : 224|22@1+ (1,-100000) [-100000|100000] "us" MCU
+ SG_ COM_Last_Clock_Sync_Error : 246|1@1+ (1,0) [0|1] "bool" MCU
+ SG_ Reserved_3 : 247|9@1+ (1,0) [0|0] "NA" MCU
+ SG_ COM_Delta_Sync : 256|32@1+ (1,-2147483647) [-2147483647|2147483647] "us" MCU
+ SG_ COM_EyeQ_Frame_ID : 288|32@1+ (1,0) [0|4294967295] "counter" MCU
+ SG_ COM_Cam_Frame_ID : 320|32@1+ (1,0) [0|4294967295] "counter" MCU
+ SG_ COM_DayTime_Indicator : 352|2@1+ (1,0) [0|2] "ENUM" MCU
+ SG_ COM_HIL_Mode_Status : 354|1@1+ (1,0) [0|1] "ENUM" MCU
+ SG_ COM_Exposure_Type : 355|2@1+ (1,0) [0|3] "ENUM" MCU
+ SG_ COM_Region_Code_V : 357|1@1+ (1,0) [0|1] "bool" MCU
+ SG_ COM_Region_Code : 358|5@1+ (1,0) [0|13] "ENUM" MCU
+ SG_ COM_Driving_Side_V : 363|1@1+ (1,0) [0|1] "bool" MCU
+ SG_ COM_Driving_Side : 364|8@1+ (1,0) [0|2] "ENUM" MCU
+ SG_ COM_Is_HighSpeed_Road_V : 372|1@1+ (1,0) [0|1] "bool" MCU
+ SG_ COM_Is_HighSpeed_Road : 373|1@1+ (1,0) [0|1] "bool" MCU
+ SG_ COM_Is_In_Tunnel : 374|2@1+ (1,0) [0|2] "ENUM" MCU
+ SG_ COM_Tunnel_Conf : 376|7@1+ (0.01,0) [0|1] "NA" MCU
+ SG_ Reserved_4 : 383|1@1+ (1,0) [0|0] "NA" MCU
+ SG_ COM_ReportingCycleMode : 384|2@1+ (1,0) [0|1] "ENUM" MCU
+ SG_ Reserved_5 : 386|30@1+ (1,0) [0|0] "NA" MCU
+ SG_ COM_ProtocolCycle_1 : 416|32@1+ (1,0) [0|4294967295] "BITWIZE" MCU
+ SG_ COM_ProtocolCycle_2 : 448|32@1+ (1,0) [0|4294967295] "BITWIZE" MCU
+
+
+CM_ SG_ 82 COM_Zero_byte "in case set to FF message is not available.";
+CM_ SG_ 82 COM_CRC "Calculated over all header signals. From the signal after the CRC until the last signal in the message";
+CM_ SG_ 82 COM_Protocol_Version "What version of this protocol we are up to";
+CM_ SG_ 82 COM_Sync_Frame_ID "synchronizes between the messages in the same frame";
+CM_ SG_ 82 COM_Frame_MCU_TS_Start "Timestamp of exposure start expressed in MCU time system";
+CM_ SG_ 82 COM_Last_MCU_Sync_TS "Feedback of last clock sync timestamp that was sent to EyeQ from MCU";
+CM_ SG_ 82 COM_Last_Clock_Sync_Skew "Skew between actual clock sync time that was sent to EyeQ and what EyeQ was expecting. If internal error exceeds signal limits, signal is clamped to its maximum.";
+CM_ SG_ 82 COM_Last_Clock_Sync_Error "If Skew is larger than defined in configuration as error or data corruption was found this bit will be turned on to True";
+CM_ SG_ 82 COM_Delta_Sync "Delta time between the MCU Timestamp and the EyeQ Timestamp";
+CM_ SG_ 82 COM_EyeQ_Frame_ID "Index of the frame by frame processed number. Only images processed by algo are assigned a number hence the output will be sequential.";
+CM_ SG_ 82 COM_Cam_Frame_ID "Actual grab index from camera. Not every image is processed by algo however. This may not be sequential as some are dropped. This is what the logger sees on the headers";
+CM_ SG_ 82 COM_DayTime_Indicator "Check Enum Values ";
+CM_ SG_ 82 COM_HIL_Mode_Status "Is in HIL mode active";
+CM_ SG_ 82 COM_Exposure_Type "Which exposure this is";
+CM_ SG_ 82 COM_Region_Code_V "Validator set to false in case the signal is not available.";
+CM_ SG_ 82 COM_Region_Code "Region code requierd for sgin accuracy, ";
+CM_ SG_ 82 COM_Driving_Side_V "Validator set to false in case the signal is not available.";
+CM_ SG_ 82 COM_Driving_Side "Indicates driving side.";
+CM_ SG_ 82 COM_Is_HighSpeed_Road_V "Validator set to false in case the signal is not available.";
+CM_ SG_ 82 COM_Is_HighSpeed_Road "TSR Responsibility: If detected, highway semantics and high driving speed signal will be set to true";
+CM_ SG_ 82 COM_Is_In_Tunnel "Indicates whether the vehicle is currently in a tunnel. The signal logic includes the tunnel_confidence with other internal parameters for tunnel detection.";
+CM_ SG_ 82 COM_Tunnel_Conf "Confidence of tunnel detection";
+CM_ SG_ 82 COM_ReportingCycleMode "Indicates in which FPS reporting cycle we are. The default mode is 36 FPS (0=REPORT_36) . When 9/18/36 FPS is enabled the signal will indicate (1=REPORT_9_18_36)";
+CM_ SG_ 82 COM_ProtocolCycle_1 "Indicate the protocol cycles of protocols in every frame. Reports all the output messages that can be reported in the frame, and not only the messages that are reported.";
+CM_ SG_ 82 COM_ProtocolCycle_2 "Indicate the protocol cycles of protocols in every frame. Reports all the output messages that can be reported in the frame, and not only the messages that are reported.";
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "BusType" "Ethernet";
+
+BA_ "GenSigStartValue" SG_ 82 COM_Protocol_Version 11;
+
+
+VAL_ 82 COM_Last_Clock_Sync_Error 1 "TRUE" 0 "FALSE" ;
+VAL_ 82 COM_DayTime_Indicator 2 "NIGHT" 1 "NA" 0 "DAY" ;
+VAL_ 82 COM_HIL_Mode_Status 1 "ACTIVE" 0 "NOT_ACTIVE" ;
+VAL_ 82 COM_Exposure_Type 3 "COLOR_C1" 2 "TEXTURE_T1" 1 "COLOR_C0" 0 "TEXTURE_T0" ;
+VAL_ 82 COM_Region_Code_V 1 "TRUE" 0 "FALSE" ;
+VAL_ 82 COM_Region_Code 13 "LATIN" 12 "ISRAEL" 11 "INDIA" 10 "UK" 9 "AUSTRALIA_AND_NZ" 8 "KOREA" 7 "SOUTH_AFRICA" 6 "CHINA" 5 "JAPAN" 4 "CANADA" 3 "USA" 2 "GULF" 1 "EUROPE" 0 "WORLD" ;
+VAL_ 82 COM_Driving_Side_V 1 "TRUE" 0 "FALSE" ;
+VAL_ 82 COM_Driving_Side 2 "RIGHT" 1 "LEFT" 0 "UNKNOWN" ;
+VAL_ 82 COM_Is_HighSpeed_Road_V 1 "TRUE" 0 "FALSE" ;
+VAL_ 82 COM_Is_HighSpeed_Road 1 "TRUE" 0 "FALSE" ;
+VAL_ 82 COM_Is_In_Tunnel 2 "TRUE" 1 "FALSE" 0 "UNFILLED" ;
+VAL_ 82 COM_ReportingCycleMode 1 "REPORT_9_18_36" 0 "REPORT_36" ;
+VAL_ 82 COM_ProtocolCycle_1 31 "(BIT_31)SAFETY_DIAGNOSTICS" 30 "(BIT_30)ROAD_PROFILE" 29 "(BIT_29)ROAD_MODEL" 28 "(BIT_28)ROAD_GEOMETRY_APPS" 27 "(BIT_27)OCR" 26 "(BIT_26)OBJECTS_ADVANCED" 25 "(BIT_25)OBJECTS" 24 "(BIT_24)LIGHT_SCENE_VCL" 23 "(BIT_23)LIGHT_SCENE_STL" 22 "(BIT_22)LIGHT_SCENE_RFL" 21 "(BIT_21)LDW" 20 "(BIT_20)LANES_ROAD_EDGE" 19 "(BIT_19)LANES_HOST" 18 "(BIT_18)LANES_APPLICATIONS" 17 "(BIT_17)LANES_ADJACENT" 16 "(BIT_16)LAND_MARKS" 15 "(BIT_15)HLB" 14 "(BIT_14)HAZARDS" 13 "(BIT_13)FREE_SPACE" 12 "(BIT_12)FCF_VRU" 11 "(BIT_11)FCF_VD" 10 "(BIT_10)FCF_CV" 9 "(BIT_9)FAIL_SAFE" 8 "(BIT_8)EGO_MOTION" 7 "(BIT_7)DS_TRAFFIC_SIGNS" 6 "(BIT_6)DFA" 5 "(BIT_5)DEBUG" 4 "(BIT_4)CONSTRUCTION_AREA" 3 "(BIT_3)COMMON" 2 "(BIT_2)CAR_OUTPUT" 1 "(BIT_1)CALIBRATION_DYNAMIC_MC" 0 "(BIT_0)CALIBRATION_DYNAMIC" ;
+VAL_ 82 COM_ProtocolCycle_2 31 "(BIT_31)RESERVED" 30 "(BIT_30)RESERVED" 29 "(BIT_29)RESERVED" 28 "(BIT_28)RESERVED" 27 "(BIT_27)RESERVED" 26 "(BIT_26)RESERVED" 25 "(BIT_25)RESERVED" 24 "(BIT_24)RESERVED" 23 "(BIT_23)RESERVED" 22 "(BIT_22)RESERVED" 21 "(BIT_21)RESERVED" 20 "(BIT_20)RESERVED" 19 "(BIT_19)RESERVED" 18 "(BIT_18)RESERVED" 17 "(BIT_17)RESERVED" 16 "(BIT_16)RESERVED" 15 "(BIT_15)RESERVED" 14 "(BIT_14)RESERVED" 13 "(BIT_13)RESERVED" 12 "(BIT_12)RESERVED" 11 "(BIT_11)ACCURATE_SPEED" 10 "(BIT_10)Lanes_CCM" 9 "(BIT_9)FCF_VRU_DYN" 8 "(BIT_8)FCF_VD_DYN" 7 "(BIT_7)FCF_CV_DYN" 6 "(BIT_6)TRAFFIC_SIGNS" 5 "(BIT_5)TFL_STRUCTURE" 4 "(BIT_4)TFL_SPOTS" 3 "(BIT_3)SEMANTIC_MARKS" 2 "(BIT_2)SEMANTIC_LINES" 1 "(BIT_1)SEMANTIC_LANES_DESCRIPTION" 0 "(BIT_0)SEMANTIC_JUNCTION" ;
+
+
+
+
